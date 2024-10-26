@@ -10,7 +10,7 @@ import os
 import time
 import getpass
 
-HOST='localhost'
+HOST='172.31.19.243'
 PORT='3306'
 DB_USER='tpglobalfx_u_test'
 DB_PASS='7#Dq5@^dJC8$(&A1'
@@ -21,7 +21,7 @@ def get_dump(database):
     filestamp = time.strftime('%Y-%m-%d-%I')
     # D:/xampp/mysql/bin/mysqldump for xamp windows
     os.popen("mysqldump -h %s -P %s -u %s -p%s %s > %s.sql" % (HOST,PORT,DB_USER,DB_PASS,database,database+"_"+filestamp))
-    
+
     print("\n|| Database dumped to "+database+"_"+filestamp+".sql || ")
 
 
